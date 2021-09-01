@@ -1,0 +1,78 @@
+.ignielMultiTab{
+  margin:1.5rem 0;
+}
+.ignielMultiTab p{
+  margin-bottom:0;
+}
+.ignielMultiTab p:first-of-type{
+  margin-top:0;
+}
+.ignielMultiTab .top label{
+  border-width:1px;
+  border-style:solid;
+  border-radius:5px;
+  cursor:pointer;
+  padding:.65rem .75rem;
+}
+.ignielMultiTab .top label:not(:last-child){
+  margin-right:.35rem;
+}
+.ignielMultiTab .top .visible{
+  background-color:#efefef;
+  border-color:transparent;
+  font-weight:600;
+}
+.ignielMultiTab .top .opt{
+  border-color:#cccccc;
+}
+.ignielMultiTab .desc{
+  background-color:#efefef;
+  border-radius:5px;
+  margin-top:1.25rem;
+  padding:1rem;
+}
+.ignielMultiTab input[type="radio"], .hide{
+  display:none;
+}
+.ignielMultiTab #rb2:checked ~ .desc .hide{
+  display:block;
+}
+.ignielMultiTab #rb2:checked ~ .desc .visible{
+  display:none;
+}
+.ignielMultiTab #rb2:checked ~ .top .opt{
+  background-color:#efefef;
+  border-color:transparent;
+  font-weight:600;
+}
+.ignielMultiTab #rb2:checked ~ .top .visible{
+  background-color:transparent;
+  border-color:#cccccc;
+  font-weight:400;
+}
+
+.ignielMultiRelated{display:none}
+/* Table of Contents by igniel.com */
+.toc {background-color:#efefef; border-radius:5px; padding:.5rem 1rem; display:table;}
+.toc h2 {display:inline-block; margin-right:10px; margin-bottom:0; font-size:1.25rem}
+.toc a {text-decoration:none}
+.toc a:hover {color:#4267b2; text-decoration:underline}
+.toc ul {list-style-type:none; list-style-image:none; margin:0; padding:0; text-align:left}
+.toc > ul {margin-top:.5rem;}
+.toc ul li {list-style-type:none;}
+.toc ul li a {color: #4b4f56; margin-left:.25rem}
+.toc ul li ul {margin-left:2em}
+.toctogglelabel {cursor:pointer;}
+:not(:checked) > .toctoggle {display:inline !important; position:absolute;  opacity:0}
+:not(:checked) > .toctogglespan:before {content:'['}
+.toctoggle:not(:checked) + .toctitle .toctogglelabel:after {content:'sembunyikan';color:#1a73e8;display: inline}
+.toctoggle:checked + .toctitle .toctogglelabel:after {content:'tampilkan';color:#1a73e8;}
+:not(:checked) > .toctogglespan:after {content:']'}
+.toctoggle:checked ~ ul{display:none}
+:target::before {content:''; display:block; height:60px; visibility:hidden}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
