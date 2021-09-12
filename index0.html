@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>BITAMON - TV LIVE STREAMING</title>
+<link rel="shortcut icon" href="" type="image/x-icon" />
+<style type='text/css' scoped=''>
+/*<![CDATA[*/
+.post-title,.footer, .header, .sidebar, .navMobile, .credit, .mainMenu{display:none}
+body {background:white;overflow: auto;}
+#tab-demo,#view{width:100%;left:0}
+.closebutton,.dlbutton,a.dlbutton{text-align:center;cursor:pointer;top:0;height:0px}
+#view{padding:0;margin:0;border:0;position:fixed;top:0px;right:0;bottom:0;height:calc(100% - 0px);background:url() center center no-repeat;transition:all .4s ease-out;box-shadow: 0 0 40px rgba(0,0,0,0.2);}
+#tab-demo{height:50px;top:0;background:#222;color:#fff;font:400 13px Arial,sans-serif;z-index:99999;position:fixed}
+.closebutton,.demologo,.dlbutton,a.demologo,a.dlbutton{line-height:50px;position:fixed;color:#fff}
+.closebutton{background:url() 15px 50% no-repeat #66af33;padding:0 20px 0 50px;right:0}
+a.closebutton{color:#fff;text-decoration:none}
+.closebutton:hover{background:url() 15px 50% no-repeat #579c26}
+.dlbutton:hover{background:url() 15px 50% no-repeat #579c26}
+.dlbutton,a.dlbutton{background:url() 15px 50% no-repeat;padding:0 20px 0 55px;right:158px;text-decoration:none}
+.demologo,a.demologo{background:url() left center no-repeat;padding-left:55px;font-size:17px;font-weight:400;font-family:Oswald,Arial,Sans-serif;text-transform:uppercase;left:15px;text-decoration:none}
+.logo{display:inline;float:left;}
+ul.resize-tool,ul.resize-tool li{list-style:none}
+ul.resize-tool{display:inline;float:left;margin:0 0 0 50px!important}
+@media screen and (max-width:480px){
+ul.resize-tool{display:none}}
+ul.resize-tool li{display:inline;float:left;height:50px;line-height:50px;margin:0 20px 0 0}
+ul.resize-tool li svg{vertical-align:middle}
+ul.resize-tool li a:active svg path,ul.resize-tool li a:focus svg path{fill:red}
+.w1024{width:1024px!important;height:600px!important;position:absolute!important;margin-bottom:50px!important}
+.w960{width:600px!important;height:960px!important;position:absolute!important;margin-bottom:50px!important}
+.w600{width:960px!important;height:600px!important;position:absolute!important;margin-bottom:50px!important}
+.w414{width:414px!important;height:736px!important;position:absolute!important;margin-bottom:50px!important}
+.w736{width:736px!important;height:414px!important;position:absolute!important;margin-bottom:50px!important}
+.w320{width:320px!important;height:480px!important;position:absolute!important;margin-bottom:50px!important}
+.w480{width:480px!important;height:320px!important;position:absolute!important;margin-bottom:50px!important}
+/*]]>*/
+</style>
+<style>
+.wc-pre-wrap{position:fixed;height:100%;width:100%;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:9999999;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);-webkit-animation: fade 3s forwards;-moz-animation: fade 3s forwards;-o-animation: fade 3s linear;animation: fade 3s forwards;}
+.wc-pre-wrap .wc-pre-start{position:relative;top:50%;left:50%;padding:30px;display:flex;background:transparent;flex-direction:column;align-items:center;transform: translate(-50% , -50%) scale(0.97);transition:all 0.3s ease}
+.wc-pre-wrap .wc-pre-start svg{width:100px;height:100px;margin:auto;display:inline-block}
+@-webkit-keyframes fade{0%{opacity:1}50%{opacity:1}100%{opacity:0}}@-moz-keyframes fade{0%{opacity:1}50%{opacity:1}100%{opacity:0}}@-moz-keyframes fade{0%{opacity:1}50%{opacity:1}100%{opacity:0}}@keyframes fade{0%{opacity:1}50%{opacity:1}100%{opacity:0}}
+</style>
+
+<div class='wc-pre-wrap'>
+<div class='wc-pre-start'>
+<img src="/video/file/img/preload.svg">
+<!--<svg enable-background='new 0 0 0 0' id='L9' version='1.1' viewBox='0 0 100 100' x='0px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' y='0px'> <path d='M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50' fill='#fff'> <animateTransform attributeName='transform' attributeType='XML' dur='0.6s' from='0 50 50' repeatCount='indefinite' to='360 50 50' type='rotate'/></path></svg>-->
+</div>  
+</div>
+
+<script>
+//<![CDATA[
+//
+document.addEventListener('DOMContentLoaded',function(){
+setTimeout(function(){
+document.querySelector('.wc-pre-wrap').style.display ='none';
+}, 3000);
+});
+//]]> 
+</script>
+<script>
+        var apikey = "";
+        var video = document.location.search ;
+        video = video.substr(4);
+        video = "https://vd.bitamon.eu.org/video/server/7888810282/901361037381/820184829103/video/"+video+"?alt=media&key="+apikey;
+
+        //document.getElementById('video').innerHTML = ' Hii '  ;
+        document.write("<iframe id='view' src="+video+"></iframe>");
+    </script>
