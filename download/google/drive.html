@@ -105,17 +105,8 @@ document.querySelector('.wc-pre-wrap').style.display ='none';
 });
 //]]> 
 </script>
-<div class='downloadInfo'>
-		<div class="Aticon">
-			<img alt="gambar title" height="65" src="https://play-lh.googleusercontent.com/N0UxhBVUmx8s7y3F7Kqre2AcpXyPDKAp8nHjiPPoOONc_sfugHCYMjBpbUKCMlK_XUs=s180-rw" title="gambar title" width="65" />
-		</div>
-<div class='fileName'>
-<span class='textd'>file_name.zip</span>
-<span class='fileSize'>200kb</span>
-</div>
-<a class='fileLink' aria-label='Download'><i class='icon download'></i></a>
-</div>
-
+<div style="text-align: center;">
+  <ul class="button">
 <script>
         var apikey = "AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA";
         var gdrive = document.location.search ;
@@ -123,28 +114,18 @@ document.querySelector('.wc-pre-wrap').style.display ='none';
         gdrive = "https://www.googleapis.com/drive/v3/files/"+gdrive+"?alt=media&key="+apikey;
 
         //document.getElementById('gdrive').innerHTML = ' Hii '  ;
-        document.write("<div class='AtLinkTarget'>https://www.alfatechnesia.my.id/?m=1</div>");
-    </script><style>
-.downloadInfo{max-width:500px;background-color:#fefefe; box-shadow:0 10px 8px -8px rgb(0 0 0 / 12%); border:1px solid #eceff1;border-radius:5px; padding:15px;margin-top:20px;margin-bottom:20px; display:flex;align-items:center; line-height:1.8em;font-size:14px}
-.downloadInfo a, .downloadInfo .fileType{flex-shrink:0;display:flex;align-items:center;justify-content:center; width:50px;height:50px; padding:10px; background:#f1f1f0;border-radius:10px}
-.downloadInfo a{background-color:#f09800;color:#fefefe; margin:0;padding:10px 12px;border-radius:3px; width:auto;height:auto; line-height:20px;font-size:13px}
-.downloadInfo a:after{content:attr(aria-label)}
-.downloadInfo .fileType:before{content:attr(data-text)}
-.downloadInfo .fileName{flex-grow:1; width:calc(100% - 150px);padding:0 15px}
-.downloadInfo .fileName > *{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.downloadInfo .fileSize{line-height:1.4em;font-size:12px;opacity:.8}
-.icon.download{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fefefe' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'><path d='M3 17v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3'/><polyline points='8 12 12 16 16 12'/><line x1='12' x2='12' y1='2' y2='16'/></svg>")}
-.icon{flex-shrink:0; display:inline-block;margin-right:12px; width:18px;height:18px; background-size:cover;background-repeat:no-repeat;background-position:center}
-.AtLinkTarget{display:none}
-@media screen and (max-width:480px){.downloadInfo{padding:12px}.downloadInfo a{width:50px;height:50px;border-radius:10px}.downloadInfo a:after{display:none}.downloadInfo a .icon{margin:0}}
-atangka{color:#214ECF;font-size:1.5em;font-weight:bold}
-.Aticon{width:65px;height:65px;float:left;}
-.post-body
-.Blog .post .post-entry .Aticon img, .darkMode .Blog .post .post-entry .post .Aticon img {background-color: unset;}
-/* CSS darkmode sesuaikan classnya jika berbeda atau hapus bagian ini */
-.darkMode .downloadInfo{background-color:#252526; border:0}
-.darkMode .downloadInfo .fileType{background-color:#1e1e1e)} </style>
-<script type='text/javascript'>
-var timeLeft = 10; //pengaturan Waktu
-var downloadBtn=document.querySelector('.fileLink'),countdown=document.querySelector('.textd');downloadBtn.addEventListener('click',()=>{var e=document.querySelector('.AtLinkTarget').innerText,t=setInterval(function(){timeLeft-=1,countdown.innerHTML='Harap Tunggu <atangka>'+timeLeft+'</atangka> Detik.',timeLeft<=0&&(clearInterval(t),window.location.href=e,setTimeout())},1e3)});
-</script>
+        document.write("<li><a class="download" href="/download" target="_blank">Download</a></li>");
+    </script>
+</ul>
+</div>
+<div class="clear"></div> 
+<style>
+.button{float:left;list-style:none;text-align:center;width:95%;margin:10px;padding:2px;font-size:14px;clear:both}
+.button ul{margin:0;padding:0}
+.button li{display:inline;margin:5px;padding:0;list-style:none}
+.button li a.demo,.button li a.download{position:relative;padding:9px 48px 9px 16px;background:#f39c12;color:#fff!important;font-weight:700;font-size:14px;text-align:center;text-transform:uppercase;letter-spacing:0.5px;border-radius:3px;box-shadow:0 1px rgba(0,0,0,0.1);line-height:normal;transition:all .3s}
+.button li a.download{background:#3498db}
+.button li a.demo:hover,.button li a.download:hover{background:#666}
+.button li a.demo:active,.button li a.download:active{cursor:pointer}
+.button li a.demo:after,.button li a.download:after{content:'f135';background:rgba(0,0,0,0.1);position:absolute;right:0;top:0;font-weight:normal;display:inline-block;margin:0 0 0 10px;color:#fff;padding:11px;font-family:fontawesome}
+.button li a.download:after{content:'f019'} </style>
