@@ -106,11 +106,11 @@ document.querySelector('.wc-pre-wrap').style.display ='none';
 //]]> 
 </script>
 <script>
-        var apikey = "";
+        var apikey = "AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA";
         var sahrulgd = document.location.search ;
         sahrulgd = sahrulgd.substr(2);
-        sahrulgd = "/download/google/cdn/drive.html?="+sahrulgd+";
+        sahrulgd = "https://www.googleapis.com/drive/v3/files/"+sahrulgd+"?alt=media&key="+apikey;
 
         //document.getElementById('sahrulgd').innerHTML = ' Hii '  ;
-        document.write("<iframe id='view' src="+sahrulgd+"></iframe>");
+        document.write("<a href="+sahrulgd+" title='Submenu 1'>Submenu 1</a>");
     </script>
