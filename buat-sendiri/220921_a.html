@@ -111,17 +111,16 @@ document.querySelector('.wc-pre-wrap').style.display ='none';
         var video="";
         var embed="";
 
-        if(!getParameterByName('id') || getParameterByName('ib')){
+        if(!getParameterByName('file') || getParameterByName('fila')){
           var eid = prompt('Enter Drive Video ID :- ');
           embed = `
-${location.href}?id=${eid}
-          `;
+${location.href}?file=${eid}`;
           prompt('Here is Your Embed Code :- ',embed);
-          window.location.href = window.location.href+'?id='+eid;
+          window.location.href = window.location.href+'?file='+eid;
         }
-        video = getParameterByName('id') ;
-        if(getParameterByName('ib')){
-            video = btoa(getParameterByName('ib'));
+        video = getParameterByName('file') ;
+        if(getParameterByName('fila')){
+            video = btoa(getParameterByName('fila'));
         }
         var vidurl = "https://www.googleapis.com/drive/v3/files/"+video+"?alt=media&key="+apikey;
         document.write("<iframe id='view' src="+vidurl+"></iframe>");
