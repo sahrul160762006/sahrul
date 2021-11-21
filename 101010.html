@@ -1,0 +1,85 @@
+<style>
+/* css form kontak blogger design by wendy code */
+.wc-kntk-frm{position:relative;display:inline-block;width:100%;max-width:500px;padding:30px 10px 10px 10px;background-color:#f2f3f7;border-radius:10px}
+.wc-dt-inp{position:relative;margin-bottom:30px;margin-right:5px}
+.wc-dt-inp input[type=text]::placeholder,.wc-dt-inp textarea::placeholder{color:#999!important;font-size:14px}
+.wc-dt-inp input:focus::placeholder,.wc-dt-inp textarea:focus::placeholder {color: transparent!important}
+.wc-dt-inp label{border-radius:10px;color:#999;font-size:12px;font-weight:400;position:absolute;pointer-events:none;left:30px;top:-15px;transition:.2s ease all;padding:0 10px;background-color:#f2f3f7;box-shadow:-3px -2px 4px rgb(255 255 255 / 90%), 5px 5px 8px rgb(0 0 0 / 7%);display:none}
+.wc-dt-inp input[type=text]:focus + label,.wc-dt-inp input[type=text].show + label,.wc-dt-inp textarea:focus + label,.wc-dt-inp textarea.show + label{display:block;}
+.wc-dt-inp input[type=text],.wc-dt-inp textarea,.wc-dt-inp.outset input[type=button]{background-color:#f2f3f7;box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(0 0 0 / 7%), inset -0.2rem -0.2rem 0.5rem rgb(255 255 255 / 90%);padding:15px 15px 15px 40px;border-radius:5px;border:none;outline:none;width:100%}
+.wc-dt-inp.outset input[type=button]{background-color:#f2f3f7;box-shadow: -3px -2px 4px rgb(255 255 255 / 90%), 5px 5px 8px rgb(0 0 0 / 7%);width: 100px;text-align: center;padding-left:15px;margin: -50px auto;color:#999;font-weight:bold}
+.wc-dt-inp.outset input[type=button]:active {box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(0 0 0 / 7%), inset -0.2rem -0.2rem 0.5rem rgb(255 255 255 / 90%)}
+.wc-dt-inp input[type=text]:active,.wc-dt-inp input[type=text]:focus,.wc-dt-inp textarea:active,.wc-dt-inp textarea:focus{outline:none}
+.wc-knt-notif{color:#ff0000} 
+.wc-dt-inp.icon-user:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:20px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 24 24' fill='%23aaaaad'><path d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z'></path></svg>") center / contain no-repeat}
+.wc-dt-inp.icon-email:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:20px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 24 24' fill='%23aaaaad'><path d='M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z'></path></svg>") center / contain no-repeat}
+.wc-dt-inp.icon-msg:before{content:"";position:absolute;left:10px;top:-50px;bottom:0;width:20px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 24 24' fill='%23aaaaad'><path d='M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H10V20.09L12.09,18H6V16H14.09L16.09,14H6V12H18.09L20,10.09V8L14,2H6M13,3.5L18.5,9H13V3.5M20.15,13C20,13 19.86,13.05 19.75,13.16L18.73,14.18L20.82,16.26L21.84,15.25C22.05,15.03 22.05,14.67 21.84,14.46L20.54,13.16C20.43,13.05 20.29,13 20.15,13M18.14,14.77L12,20.92V23H14.08L20.23,16.85L18.14,14.77Z'></path></svg>") center / contain no-repeat}
+  
+/* css darkmode sesuaikan class ( .drK ) dengan template yang kalian gunakan agar dapat berfungsi */
+.drK .wc-kntk-frm,.drK .wc-dt-inp label,.drK .wc-dt-inp input[type=text],.drK .wc-dt-inp textarea,.drK .wc-dt-inp.outset input[type=button]{background-color:#2d2d30;color:#aaaaad}
+.drK .wc-dt-inp input[type=text],.drK .wc-dt-inp textarea,.drK .wc-dt-inp.outset input[type=button]:active{box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(36 36 36), inset -0.2rem -0.2rem 0.5rem rgb(32 32 32)}
+.drK .wc-dt-inp.outset input[type=button],.drK .wc-dt-inp label{box-shadow:-3px -2px 4px rgb(36 36 36), 5px 5px 8px rgb(32 32 32)}
+</style>
+  
+<div class='wc-kntk-frm' id='ContactForm1'>
+<form name='ContactForm'>
+<div class='wc-dt-inp icon-user'>
+<input id='ContactForm1_contact-form-name' name='name' placeholder='Nama' type='text'/>
+<label>Nama</label>
+</div>
+<div class='wc-dt-inp icon-email'>
+<input id='ContactForm1_contact-form-email' name='email' placeholder='Email' type='text'/>
+<label>Email</label>
+</div>
+<div class='wc-dt-inp icon-msg'>
+<textarea id='ContactForm1_contact-form-email-message' name='message' placeholder='Pesan' rows='3'></textarea>
+<label>Pesan</label>
+</div>
+<div class='wc-dt-inp outset'>
+<input id='ContactForm1_contact-form-submit' type='button' value='Submit'/>
+</div>
+<div class='wc-knt-notif'>
+<div id='ContactForm1_contact-form-error-message'></div>
+<div id='ContactForm1_contact-form-success-message'></div>
+</div>
+</form>
+</div>
+
+<script src='https://www.blogger.com/static/v1/widgets/2271878333-widgets.js'></script>
+<script>
+/*
+ubah 0000000000000000000 dengan blog id milik mu ada 4 yang harus di ubah
+ubah www.domainmu.com dengan domain milikmu
+source code : https://median-ui.jagodesain.com
+*/
+
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) {
+    window['blogger_templates_experiment_id'] = 'templatesV1';
+    window['blogger_blog_id'] = '4496898789932510497';
+    BLOG_attachCsiOnload('');
+}
+_WidgetManager._Init('//www.blogger.com/rearrange?blogID\4496898789932510497', '//awumy.blogspot.com/', '4496898789932510497');
+_WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1', 'footer1', null, document.getElementById('ContactForm1'), {
+    'contactFormMessageSendingMsg': 'Mengirim...',
+    'contactFormMessageSentMsg': 'Pesan Anda telah dikirim..',
+    'contactFormMessageNotSentMsg': 'Pesan tidak dapat dikirim. Silakan coba lagi nanti.',
+    'contactFormInvalidEmailMsg': 'Diperlukan alamat email yang valid.',
+    'contactFormEmptyMessageMsg': 'Bidang pesan tidak boleh kosong.',
+    'title': 'Contact Form',
+    'blogId': '4496898789932510497',
+    'contactFormNameMsg': 'Name',
+    'contactFormEmailMsg': 'Email',
+    'contactFormMessageMsg': 'Message',
+    'contactFormSendMsg': 'Send',
+    'submitUrl': 'https://www.blogger.com/contact-form.do'
+}, 'displayModeFull'));
+  
+var inputs = document.querySelectorAll('.wc-dt-inp input[type=text], .wc-dt-inp input[type=email], .wc-dt-inp textarea');
+for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+    input.addEventListener('input', function() {
+        var bg = this.value ? 'show' : 'none';
+        this.setAttribute('class', bg);
+    });
+}
+</script>
