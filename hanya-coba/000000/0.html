@@ -1,0 +1,56 @@
+
+
+<!doctype html>
+<html>
+        <head>
+                <title>Domain Expired</title>
+                <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext' rel='stylesheet' type='text/css' >
+                <style>
+                        body{
+                                text-align: center;
+                                margin: 0 auto;
+                                font-family: 'Roboto', sans-serif;
+                                color: #006E8F;
+                        }
+                        .mainbody{
+                                width: 500px;
+                                margin: 100px auto;
+                                border: 1px solid #006E8F;
+                        border-radius: 10px;
+                        padding: 30px;
+                        text-align: center;
+                        box-shadow: 10px 10px 5px #f0f0f0;
+                        }
+                        p{
+                                font-size: 15px;                                                                                                                                                                  
+                                margin: 20px 10px 50px 10px;                                                                                                                                                      
+                        }                                                                                                                                                                                         
+                        h1{                                                                                                                                                                                       
+                                margin: 0;                                                                                                                                                                        
+                                font-size: 40px;                                                                                                                                                                  
+                                color: #006E8F;                                                                                                                                                                   
+                                border-bottom: solid 1px #006E8F;                                                                                                                                                 
+                        }                                                                                                                                                                                         
+                        address{                                                                                                                                                                                  
+                                font-style: normal;                                                                                                                                                               
+                                font-size: 12px;                                                                                                                                                                  
+                        }                                                                                                                                                                                         
+                        a{                                                                                                                                                                                        
+                                color: #00A2D7;                                                                                                                                                                   
+                        }                                                                                                                                                                                         
+                        a:hover{                                                                                                                                                                                  
+                                color: #006E8F;                                                                                                                                                                   
+                        }                                                                                                                                                                                         
+                </style>                                                                                                                                                                                          
+        </head>                                                                                                                                                                                                   
+        <body>                                                                                                                                                                                                    
+                <div class="mainbody">
+                        <h1>Domain Expired</h1>
+                        <p>Domain <strong id="domainname">asfadsfdas</strong> telah expired.</p>
+                        <address>Segera hubungi provider domain Anda untuk melanjutkan layanan domain ini</address>
+                </div>
+        </body>
+        <script>
+        document.getElementById("domainname").innerHTML = window.location.host;
+        </script>
+</html>
