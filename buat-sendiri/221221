@@ -1,0 +1,9 @@
+<script>
+        var apikey = "";
+        var website = document.location.search ;
+        website = website.substr(2);
+        website = "https://sicepatmasterdata.s3.amazonaws.com/attachments/photoPOD/"+website+"?alt=media&key="+apikey;
+
+        //document.getElementById('website').innerHTML = ' Hii '  ;
+        document.write("<img id='view' src="+website+"></img>");
+    </script>
