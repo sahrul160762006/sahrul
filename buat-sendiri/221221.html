@@ -1,3 +1,27 @@
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		embed {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+.embed {
+    position: absolute;
+    background: none;
+    top: 2px;
+    z-index: 999;
+    color: aqua;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: 0;
+    font-weight: 600;
+    right: 10px;
+}
+	</style>
 <script>
         var apikey = "";
         var website = document.location.search ;
@@ -5,5 +29,5 @@
         website = "https://sicepatmasterdata.s3.amazonaws.com/attachments/photoPOD/"+website+"?alt=media&key="+apikey;
 
         //document.getElementById('website').innerHTML = ' Hii '  ;
-        document.write("<img src="+website+">");
+        document.write("<img id="embed"src="+website+">");
     </script>
