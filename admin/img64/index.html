@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=width-device, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/admin/img64/data/base64.css">
+    <title>Simple Image Editor Using JavaScript</title>
+  </head>
+  <body>
+    
+    <section class="container">
+      <div class="box">
+        <div class="box-header">
+          <figure class="image-container">
+            <img class="image" id="image">
+          </figure>
+          <div class="button-box">
+            <input type="file" class="input-file" id="input-file" accept="image/*">
+            <label for="input-file">Choose an image</label>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="form-group">
+            <label for="blur">Blur</label>
+            <input type="range" class="input-range" id="blur" min="0" max="100" value="0">
+          </div>
+          <div class="form-group">
+            <label for="contrast">Contrast</label>
+            <input type="range" class="input-range" id="contrast" min="0" max="200" value="100">
+          </div>
+          <div class="form-group">
+            <label for="hue-rotate">Hue Rotate</label>
+            <input type="range" class="input-range" id="hue-rotate" min="0" max="360" value="0">
+          </div>
+          <div class="form-group">
+            <label for="sepia">Sepia</label>
+            <input type="range" class="input-range" id="sepia" min="0" max="200" value="0">
+          </div>
+          <div class="form-group">
+            <label for="radius">Radius</label>
+            <input type="range" class="input-range" id="radius" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="/admin/img64/data/base64.js"></script>
+  </body>
+</html>
