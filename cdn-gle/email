@@ -1,0 +1,62 @@
+
+//script email notifikasi otomatis dengan google form
+function emailkonfirmasi(e) {
+  var nama=e.values[1]; //membaca email pada kolom kolom B
+  var email=e.values[2]; //membaca kolom ke kolom C
+  var pesan=e.values[3]; //membaca kolom kolom D
+
+  var subject="SAHRUL.ID - PESAN UNTUK KAMU"; //subject yang akan tampil di email penerima
+
+  var message=createHTMLHeader();
+
+  message+="<div dir="auto" style="background-color: #18c7a1; border-radius: 4px; border: 0px; color: #000112; font-family: roboto, sans-serif; font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><h2 style="background: rgb(24, 199, 161); border-radius: 4px; border: 0px; color: white; font-family: inherit; font-size: 15px; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px 0px 0.6rem; padding: 0px 0px 0px 5px; text-align: center; text-transform: uppercase; vertical-align: baseline;"><span style="font-family: inherit; font-style: inherit; font-weight: inherit;">SAHRUL ID ~ PESAN OTOMATIS</span></h2><div dir="auto"><div dir="auto" style="background-color: white; border-radius: 4px; border: 0px; font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><h2 style="background: rgb(24, 199, 161); border-radius: 4px; border: 0px; color: white; font-family: inherit; font-size: 15px; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px 0px 0.6rem; padding: 0px 0px 0px 5px; text-align: center; text-transform: uppercase; vertical-align: baseline;">Pesan kamu telah diterima</h2><div dir="auto" style="text-align: center;"><span style="font-family: inherit; font-style: inherit; font-weight: inherit;">Hai </span><span style="font-family: inherit; font-style: inherit;"><b> "+nama+" </b></span></div><div dir="auto" style="font-weight: inherit; text-align: center;"><span style="font-family: inherit; font-style: inherit; font-weight: inherit;"><br /></span></div><div dir="auto" style="font-weight: inherit; text-align: center;"><span style="font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant-caps: inherit; font-variant-ligatures: inherit; font-weight: inherit;">Terima kasih telah menghubungi saya</span></div><div dir="auto" style="font-weight: inherit; text-align: center;">Saya ingin memberitaukan bahwa pesan anda</div><div dir="auto" style="font-weight: inherit; text-align: center;">Telah terkirim ke email utama sahrul.id</div><div dir="auto" style="font-weight: inherit; text-align: center;"><br /></div><div dir="auto" style="font-weight: inherit; text-align: center;"><br /></div><div dir="auto" style="font-weight: inherit; text-align: center;">PESAN OLEH : SAHRUL - PESAN OTOMATIS</div></div></div><span style="background-color: white; font-size: 14px; margin: 0px; padding: 0px; vertical-align: inherit;"><div dir="auto" style="border-radius: 4px; border: 0px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><h2 style="background: rgb(24, 199, 161); border-radius: 4px; border: 0px; color: white; font-family: inherit; font-size: 15px; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px 0px 0.6rem; padding: 0px 0px 0px 5px; text-align: center; text-transform: uppercase; vertical-align: baseline;">Berikut data yang anda masukkan</h2><div dir="auto"><b>Nama</b><span style="font-weight: inherit;">&nbsp; &nbsp;: "+nama+" </span></div><div dir="auto"><b>Email</b><span style="font-weight: inherit;">&nbsp; &nbsp; : "+email+"</span></div><div dir="auto"><b>Pesan&nbsp;&nbsp;</b><span style="font-weight: inherit;">&nbsp;: "+pesan+"</span></div></div></div></span></div><div dir="auto"><div dir="auto" style="background-color: white; border-radius: 4px; border: 0px; font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><div dir="auto"><span style="font-weight: inherit;">Perlu diketahui bahwa email ini adalah email notifikasi. email ini otomatis terkirim dari sistem kami dan </span><u>tidak</u><span style="font-weight: inherit;"> dapat menerima email dari kamu.</span></div></div></div><span style="background-color: white; font-size: 14px; font-weight: inherit; margin: 0px; padding: 0px; vertical-align: inherit;">&nbsp;© COPYRIGHT BY SAHRUL ID&nbsp; &nbsp;</span></div></div></div><div data-smartmail="gmail_signature"><br style="font-family: sans-serif; font-size: large;" /></div>";
+
+
+  message+=createHTMLFooter();
+
+  MailApp.sendEmail({to:email,
+                     subject:subject,
+                     htmlBody:message,
+                     name:"SAHRUL.ID" //nama yang akan tampil di email penerima
+                    });
+}
+
+//script untuk membuat email notifikasi ke email anda sebagai pemilik formulir online
+function emailNotifikasi(e) {
+var nama=e.values[1]; //membaca email pada kolom kolom B
+var email=e.values[2]; //membaca kolom ke kolom C
+var pesan=e.values[3]; //membaca kolom kolom D
+
+  var subject="PESAN DI TERIMA"; //subject yang akan tampil di email kita
+
+  var message=createHTMLHeader();
+
+  message+="<div dir="auto" style="background-color: #18c7a1; border-radius: 4px; border: 0px; color: #000112; font-family: roboto, sans-serif; font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><h2 style="background: rgb(24, 199, 161); border-radius: 4px; border: 0px; color: white; font-family: inherit; font-size: 15px; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px 0px 0.6rem; padding: 0px 0px 0px 5px; text-align: center; text-transform: uppercase; vertical-align: baseline;"><span style="font-family: inherit; font-style: inherit; font-weight: inherit;">SAHRUL ID ~ PESAN OTOMATIS</span></h2><div dir="auto"><div dir="auto" style="background-color: white; border-radius: 4px; border: 0px; font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><h2 style="background: rgb(24, 199, 161); border-radius: 4px; border: 0px; color: white; font-family: inherit; font-size: 15px; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px 0px 0.6rem; padding: 0px 0px 0px 5px; text-align: center; text-transform: uppercase; vertical-align: baseline;">Pesan masuk</h2><div dir="auto" style="text-align: center;"><span style="font-family: inherit; font-style: inherit; font-weight: inherit;">Hai </span><span style="font-family: inherit; font-style: inherit;"><b>Sahrul</b></span></div><div dir="auto" style="font-weight: inherit; text-align: center;"><span style="font-family: inherit; font-style: inherit; font-weight: inherit;"><br /></span></div><div dir="auto" style="font-weight: inherit; text-align: center;">Kami mendeteksi adanya pesan masuk</div><div dir="auto" style="font-weight: inherit; text-align: center;">sebagai berikut</div><div dir="auto" style="font-weight: inherit; text-align: center;"><br /></div><div dir="auto" style="font-weight: inherit; text-align: center;">"+pesan+"</div><div dir="auto" style="font-weight: inherit; text-align: center;"><br /></div></div></div><span style="background-color: white; font-size: 14px; margin: 0px; padding: 0px; vertical-align: inherit;"><div dir="auto" style="border-radius: 4px; border: 0px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><h2 style="background: rgb(24, 199, 161); border-radius: 4px; border: 0px; color: white; font-family: inherit; font-size: 15px; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px 0px 0.6rem; padding: 0px 0px 0px 5px; text-align: center; text-transform: uppercase; vertical-align: baseline;">Berikut data yang anda masukkan</h2><div dir="auto"><b>Nama</b><span style="font-weight: inherit;">&nbsp; &nbsp;: "+nama+" </span></div><div dir="auto"><b>Email</b><span style="font-weight: inherit;">&nbsp; &nbsp; : "+email+"</span></div><div dir="auto"><b>Pesan&nbsp;&nbsp;</b><span style="font-weight: inherit;">&nbsp;: "+pesan+"</span></div></div></div></span></div><div dir="auto"><div dir="auto" style="background-color: white; border-radius: 4px; border: 0px; font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><div style="background: rgb(242, 242, 242); border-radius: 10px; border: 1px solid rgb(24, 199, 161); font-family: inherit; font-size: 0.9rem; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 1em 0px; max-width: 100%; padding: 10px; vertical-align: baseline;"><div dir="auto"><span style="font-weight: inherit;">Perlu diketahui bahwa email ini adalah email notifikasi. email ini otomatis terkirim dari sistem kami dan </span><u>tidak</u><span style="font-weight: inherit;"> dapat menerima email dari kamu.</span></div></div></div><span style="background-color: white; font-size: 14px; font-weight: inherit; margin: 0px; padding: 0px; vertical-align: inherit;">&nbsp;© COPYRIGHT BY SAHRUL ID&nbsp; &nbsp;</span></div></div></div><div data-smartmail="gmail_signature"><br style="font-family: sans-serif; font-size: large;" /></div>";
+
+
+
+  message+=createHTMLFooter();
+
+  MailApp.sendEmail({
+    to:"noreply@sahrul.id",
+    subject:subject,
+    htmlBody:message,
+    name:"Sahrul.id"
+  });
+}
+
+function createHTMLHeader(){
+  var html="<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>";
+  html+="<html xmlns='https://www.w3.org/1999/xhtml'>";
+  html+="<head>";
+  html+="<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />";
+  html+="</head>";
+  html+="<body>";
+  return html;
+}
+
+function createHTMLFooter(){
+  var html="</body>";
+  html+="</html>";
+  return html;
+}
